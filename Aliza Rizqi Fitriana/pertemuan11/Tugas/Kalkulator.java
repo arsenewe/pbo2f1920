@@ -7,7 +7,7 @@ package Tugas;
 
 /**
  *
- * @author Wahyu devi
+ * @author hokyt
  */
 public class Kalkulator extends javax.swing.JFrame {
         float a, hasil;
