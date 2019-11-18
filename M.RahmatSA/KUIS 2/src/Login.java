@@ -9,8 +9,7 @@
  * @author RuminazVlntine
  */
 public class Login extends javax.swing.JFrame {
-    public String nama;
-    public int telp;
+    public String nama,telp;
    
     /**
      * Creates new form Login
@@ -43,6 +42,12 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("Telp.");
 
         jLabel3.setText("Password");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -102,10 +107,18 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void getNama(){
+     nama = jTextField1.getText();   
+    }
+    
+    public void getTelp(){
+    telp = jTextField2.getText();   
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        nama = jTextField1.getText();
+        telp = jTextField2.getText();
         String password = new String(jPasswordField1.getPassword());
-        System.out.println(password);
         if(password=="123"){
         new HKal().setVisible(true);
         }else{
@@ -118,6 +131,10 @@ public class Login extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
