@@ -3,19 +3,75 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package Quiz2;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author RuminazVlntine
+ * @author MSI GAMING
  */
-public class RD extends javax.swing.JFrame {
+public class Tabel extends javax.swing.JFrame {
+    private static Connection koneksi2;
+    private DefaultTableModel model2;
 
     /**
-     * Creates new form RD
+     * Creates new form Tabel
      */
-    public RD() {
+    public Tabel() {
         initComponents();
+        model2 = new DefaultTableModel();
+        this.jTable1.setModel(model2);
+        model2.addColumn("Angka1");
+        model2.addColumn("Angka2");
+        model2.addColumn("Operator");
+        model2.addColumn("Hasil");
+        ambil_data_tabel();
     }
+    
+    private void ambil_data_tabel() {
+        model2.getDataVector().removeAllElements();         
+        model2.fireTableDataChanged();        
+        try {             
+            //buka_koneksi();             
+            Statement s = (Statement) koneksi2.createStatement();             
+            String sql = "Select * from operasi";             
+            ResultSet r = s.executeQuery(sql);             
+            while (r.next()) {                 
+                Object[] o = new Object[4];                
+                o[0] = r.getString("Angka1");                 
+                o[1] = r.getString("Angka2");                 
+                o[2] = r.getString("Operator");                
+                o[3] = r.getString("Hasil");                 
+                model2.addRow(o);             
+            }             
+            r.close();             
+            s.close();         
+        } catch (SQLException e) {             
+            JOptionPane.showMessageDialog(this,"Terjadi kesalahan " + e.getMessage());         
+        }
+    }
+    
+   /* private static void buka_koneksi() {
+        if(koneksi2 == null) {
+            try {
+                String url = "jdbc:mysql://localhost:3306/quiz_2?zeroDateTimeBehavior=convertToNull [root on Default schema]";
+                String user = "root";
+                String password = "";
+                DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+                koneksi2 = (Connection) DriverManager.getConnection(url, user, password);
+            }catch(SQLException t) {
+                System.out.println("Error membuat koneksi");
+            }
+        }
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,7 +96,7 @@ public class RD extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Angka 1", "Angka 2", "Operator", "Hasil"
+                "Angka1", "Angka2", "Operator", "Hasil"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -59,20 +115,20 @@ public class RD extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(33, 33, 33))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -80,16 +136,14 @@ public class RD extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        new Kalkulator().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
         
-        // set the model to the table
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -103,20 +157,20 @@ public class RD extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tabel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RD().setVisible(true);
+                new Tabel().setVisible(true);
             }
         });
     }
