@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author septianenggarsukmana
  */
 public class KalkulatorClass {
+<<<<<<< HEAD
     ArrayList<Record> listKalkulator; 
     
     public KalkulatorClass(){
@@ -25,4 +26,20 @@ public class KalkulatorClass {
       return listKalkulator;  
     }
     
+=======
+    ArrayList<Record> listKalkulator;
+    
+    public KalkulatorClass(){
+        listKalkulator = new ArrayList<>();
+        
+    }
+    
+    public void isiData(String angka1, String angka2, String operator, String hasil){
+        Record kalkulator = new Record(angka1, angka2, operator, hasil);
+        listKalkulator.add(kalkulator);
+    }
+    public ArrayList<Record> getData(){
+        return listKalkulator;
+    }
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
 }
