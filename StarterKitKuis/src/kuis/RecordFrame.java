@@ -4,6 +4,15 @@
  * and open the template in the editor.
  */
 package kuis;
+<<<<<<< HEAD
+import javax.swing.table.DefaultTableModel;
+/**
+ *
+ * @author user
+ */
+public class RecordFrame extends javax.swing.JFrame {
+    public static KalkulatorClass dKalkulator = new KalkulatorClass();
+=======
 
 import javax.swing.table.DefaultTableModel;
 
@@ -14,6 +23,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class RecordFrame extends javax.swing.JFrame {
     public static KalkulatorClass mHistoryData = new KalkulatorClass();
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
     
     DefaultTableModel model;
     /**
@@ -21,6 +31,24 @@ public class RecordFrame extends javax.swing.JFrame {
      */
     public RecordFrame() {
         initComponents();
+<<<<<<< HEAD
+        dKalkulator = Kalkulator.dataKalkulator;
+        
+        String[]NamaKolom = {"Angka1","Angka2","Operator","Hasil"};
+        Object [][] objekKalkulator = new Object[dKalkulator.getData().size()][4];
+        
+        int index=0;
+        for (int i = 0; i < dKalkulator.getData().size() ; i++) {
+            Record model = dKalkulator.getData().get(i);
+            String [] array = {model.getAngka1(),
+                                model.getAngka2(),
+                                model.getOperator(),
+                                model.getHasil()};
+            objekKalkulator[i] = array;
+        }
+        model = new DefaultTableModel(objekKalkulator, NamaKolom);
+        jTable1.setModel(model);
+=======
         mHistoryData = Kalkulator.mHistoryDataKalklator;
         
         String[] NamaKolom = {"Angka 1", "Angka 2", "Operator", "Hasil"};
@@ -33,6 +61,7 @@ public class RecordFrame extends javax.swing.JFrame {
             objekKalkulator[ii] = array;
         }
         
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
     }
 
     /**
@@ -45,12 +74,21 @@ public class RecordFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
+<<<<<<< HEAD
+        jTable1 = new javax.swing.JTable();
+        jTableData = new javax.swing.JToggleButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+=======
         jTableData = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTableData.setModel(new javax.swing.table.DefaultTableModel(
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -61,15 +99,30 @@ public class RecordFrame extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+<<<<<<< HEAD
+        jScrollPane1.setViewportView(jTable1);
+
+        jTableData.setText("Back");
+=======
         jScrollPane1.setViewportView(jTableData);
 
         jButton1.setText("jButton1");
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTableData)
+                .addGap(37, 37, 37))
+=======
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -78,15 +131,24 @@ public class RecordFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jTableData)
+                .addContainerGap(74, Short.MAX_VALUE))
+=======
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jButton1)
                 .addContainerGap(79, Short.MAX_VALUE))
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
         );
 
         pack();
@@ -128,8 +190,16 @@ public class RecordFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JToggleButton jTableData;
+    // End of variables declaration//GEN-END:variables
+
+=======
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableData;
     // End of variables declaration//GEN-END:variables
+>>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
 }
