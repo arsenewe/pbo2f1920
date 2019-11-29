@@ -11,6 +11,8 @@ package kuis;
  * @author septianenggarsukmana
  */
 public class Login extends javax.swing.JFrame {
+    public static String namaVar;
+    public static String teleponVar;
     
     public static LoginClass loginc;
 
@@ -48,6 +50,11 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Password");
 
         jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +96,21 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String nama = jTextNama.getText().toString();
+        String telepon = jTextTelp.getText().toString();
+        String pass = jPasswordField.getText().toString();
+        
+        namaVar = nama;
+        teleponVar = telepon;
+        
+        loginc.setNama(namaVar);
+        loginc.setTelepon(teleponVar);
+        
+        new Kalkulator().setVisible(true);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
