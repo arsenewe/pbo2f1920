@@ -11,6 +11,8 @@ package kuis;
  * @author septianenggarsukmana
  */
 public class Login extends javax.swing.JFrame {
+    public static String namaVar;
+    public static String teleponVar;
     
     public static LoginClass loginc;
 
@@ -41,6 +43,18 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextNamaActionPerformed(evt);
+            }
+        });
+
+        jTextTelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextTelpActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("Nama");
 
         jLabel2.setText("Telp");
@@ -48,6 +62,17 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("Password");
 
         jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jPasswordField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,6 +114,33 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String nama = jTextNama.getText().toString();
+        String password = jPasswordField.getText().toString();
+        String telepon = jTextTelp.getText().toString();
+        
+        namaVar = nama;
+        teleponVar = telepon;
+        
+        loginc.setNama(namaVar);
+        loginc.setTelepon(teleponVar);
+        
+        new Kalkulator().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNamaActionPerformed
+
+    private void jTextTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextTelpActionPerformed
+
+    private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,4 +186,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTextNama;
     private javax.swing.JTextField jTextTelp;
     // End of variables declaration//GEN-END:variables
+
+    
 }
