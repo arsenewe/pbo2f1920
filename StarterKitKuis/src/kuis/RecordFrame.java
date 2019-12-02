@@ -1,53 +1,109 @@
+<<<<<<< HEAD
+package kuis;
+
+/**
+ *
+ * @author Windows
+ */
+public class RecordFrame extends javax.swing.JFrame {
+    public static KalkulatorClass mHistoryData = new KalkulatorClass();
+    
+    DefaultTableModel model;
+    
+=======
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package kuis;
-<<<<<<< HEAD
+
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
- * @author user
+<<<<<<< HEAD
+ * @author WINDOWS 10
  */
 public class RecordFrame extends javax.swing.JFrame {
-    public static KalkulatorClass dKalkulator = new KalkulatorClass();
+    public static KalkulatorClass mHistoryData=new KalkulatorClass();
+    
+    DefaultTableModel model;
+
 =======
-
-import javax.swing.table.DefaultTableModel;
-
-/**
- *
+<<<<<<< HEAD
+ * @author MSI GAMING
+ */
+=======
  * @author hokyt
  */
 
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 public class RecordFrame extends javax.swing.JFrame {
     public static KalkulatorClass mHistoryData = new KalkulatorClass();
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
     
     DefaultTableModel model;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     /**
      * Creates new form RecordFrame
      */
     public RecordFrame() {
         initComponents();
 <<<<<<< HEAD
-        dKalkulator = Kalkulator.dataKalkulator;
+        mHistoryData = Kalkulator.mHistoryDataKalkulator;
         
-        String[]NamaKolom = {"Angka1","Angka2","Operator","Hasil"};
-        Object [][] objekKalkulator = new Object[dKalkulator.getData().size()][4];
-        
-        int index=0;
-        for (int i = 0; i < dKalkulator.getData().size() ; i++) {
-            Record model = dKalkulator.getData().get(i);
-            String [] array = {model.getAngka1(),
-                                model.getAngka2(),
-                                model.getOperator(),
-                                model.getHasil()};
-            objekKalkulator[i] = array;
+        String[] NamaKolom = {"Angka1","Angka2","Operator","Hasil"};
+        Object[][] objekKalkulator = new Object[mHistoryData.getData().size()][4];
+   
+        int index = 0;
+        for (int ii = 0; ii < mHistoryData.getData().size(); ii++){
+            Record model = mHistoryData.getData().get(ii);
+            String[] array = {model.getAngka1(),
+                              model.getAngka2(),
+                              model.opertor(),
+                              model.getHasil(),
+            objekKalkulator[ii] = array;
+                 
         }
         model = new DefaultTableModel(objekKalkulator, NamaKolom);
-        jTable1.setModel(model);
+        jTableData.setModel(model);
+=======
+<<<<<<< HEAD
+        mHistoryData = Kalkulator.datKalkulator;
+        
+        String[] NamaKolom={"Angka1","Angka2","Operator","Hasil"};
+        Object[][] objekKalkulator=new Object[mHistoryData.getData().size()][4];
+         
+        
+        int index=0;
+        for (int ii=0; ii<mHistoryData.getData().size(); ii++){
+            Record model = mHistoryData.getData().get(ii);
+            String[] array = {model.getAngka1(),model.getAngka2(),model.getOperator(),model.getHasil()};
+            objekKalkulator[ii]=array;
+        }
+        model = new DefaultTableModel(objekKalkulator,NamaKolom);
+        jTableData.setModel(model);
+        
+=======
+<<<<<<< HEAD
+        mHistoryData = Kalkulator.mHistoryDataKalkulator;
+        
+        String[] NamaKolom = {"Angka1", "Angka2", "Operator", "Hasil"};
+        Object[][] objekKalkulator = new Object[mHistoryData.getData().size()][4];
+        
+        int index = 0;
+        for(int ii = 0; ii < mHistoryData.getData().size(); ii++) {
+            Record model = mHistoryData.getData().get(ii);
+            String[] array = {model.getAngka1(), model.getAngka2(), model.getOperator(), model.getHasil()};
+            objekKalkulator[ii] =  array;
+        }
+        model = new DefaultTableModel(objekKalkulator, NamaKolom);
+        jTabelData.setModel(model);
 =======
         mHistoryData = Kalkulator.mHistoryDataKalklator;
         
@@ -61,7 +117,9 @@ public class RecordFrame extends javax.swing.JFrame {
             objekKalkulator[ii] = array;
         }
         
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     }
 
     /**
@@ -75,20 +133,35 @@ public class RecordFrame extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
 <<<<<<< HEAD
-        jTable1 = new javax.swing.JTable();
-        jTableData = new javax.swing.JToggleButton();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableData = new javax.swing.JTable();
+=======
+<<<<<<< HEAD
+        jTableData = new javax.swing.JTable();
+=======
+<<<<<<< HEAD
+        jTabelData = new javax.swing.JTable();
 =======
         jTableData = new javax.swing.JTable();
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
         jTableData.setModel(new javax.swing.table.DefaultTableModel(
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+=======
+<<<<<<< HEAD
+        jTableData.setModel(new javax.swing.table.DefaultTableModel(
+=======
+<<<<<<< HEAD
+        jTabelData.setModel(new javax.swing.table.DefaultTableModel(
+=======
+        jTableData.setModel(new javax.swing.table.DefaultTableModel(
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -100,28 +173,54 @@ public class RecordFrame extends javax.swing.JFrame {
             }
         ));
 <<<<<<< HEAD
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableData);
 
-        jTableData.setText("Back");
+        jButton1.setText("jButton1");
+=======
+<<<<<<< HEAD
+        jScrollPane1.setViewportView(jTableData);
+
+        jButton1.setText("jButton1");
+=======
+<<<<<<< HEAD
+        jScrollPane1.setViewportView(jTabelData);
+
+        jButton1.setText("Back");
 =======
         jScrollPane1.setViewportView(jTableData);
 
         jButton1.setText("jButton1");
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 140, Short.MAX_VALUE))
+=======
+<<<<<<< HEAD
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
+                .addGap(22, 22, 22))
+=======
             .addGroup(layout.createSequentialGroup()
 <<<<<<< HEAD
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTableData)
-                .addGap(37, 37, 37))
+                .addContainerGap(13, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
 =======
                 .addContainerGap(15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,24 +230,40 @@ public class RecordFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
 <<<<<<< HEAD
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
+=======
+<<<<<<< HEAD
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap())
+=======
+<<<<<<< HEAD
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(jTableData)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 =======
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jButton1)
                 .addContainerGap(79, Short.MAX_VALUE))
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         );
 
         pack();
@@ -190,16 +305,20 @@ public class RecordFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JToggleButton jTableData;
-    // End of variables declaration//GEN-END:variables
-
-=======
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
+<<<<<<< HEAD
     private javax.swing.JTable jTableData;
+=======
+<<<<<<< HEAD
+    private javax.swing.JTable jTableData;
+=======
+<<<<<<< HEAD
+    private javax.swing.JTable jTabelData;
+=======
+    private javax.swing.JTable jTableData;
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     // End of variables declaration//GEN-END:variables
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
 }

@@ -1,19 +1,15 @@
 package kuis;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author septianenggarsukmana
  */
 public class Login extends javax.swing.JFrame {
+<<<<<<< HEAD
+=======
     public static String namaVar;
     public static String teleponVar;
     
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     public static LoginClass loginc;
 
     /**
@@ -75,7 +71,7 @@ public class Login extends javax.swing.JFrame {
                 jPasswordFieldActionPerformed(evt);
             }
         });
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -119,19 +115,27 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<<<<<<< HEAD
-        String nama = jTextNama.getText().toString();
-        String telepon = jTextTelp.getText().toString();
-        String pass = jPasswordField.getText().toString();
-=======
         // TODO add your handling code here:
+<<<<<<< HEAD
+        String nama=jTextNama.getText().toString();
+        String password=jPasswordField.getText().toString();
+        String telepon=jTextTelp.getText().toString();
+        
+        namaVar=nama;
+        teleponVar=telepon;
+=======
         String nama = jTextNama.getText().toString();
+<<<<<<< HEAD
+        String telepon = jTextTelp.getText().toString();
+        String password =  jPasswordField.getText().toString();
+=======
         String password = jPasswordField.getText().toString();
         String telepon = jTextTelp.getText().toString();
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
         
         namaVar = nama;
         teleponVar = telepon;
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
         
         loginc.setNama(namaVar);
         loginc.setTelepon(teleponVar);
@@ -144,6 +148,8 @@ public class Login extends javax.swing.JFrame {
 =======
     }//GEN-LAST:event_jButton1ActionPerformed
 
+<<<<<<< HEAD
+=======
     private void jTextNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNamaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextNamaActionPerformed
@@ -152,11 +158,12 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextTelpActionPerformed
 
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
     private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldActionPerformed
 
->>>>>>> 068612d5efd19c38dbefc7487975dc5119431d50
+>>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
     /**
      * @param args the command line arguments
      */
