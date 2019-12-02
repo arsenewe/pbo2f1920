@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+package kuis;
+
+/**
+ *
+ * @author Windows
+ */
+public class RecordFrame extends javax.swing.JFrame {
+    public static KalkulatorClass mHistoryData = new KalkulatorClass();
+    
+    DefaultTableModel model;
+    
+=======
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -35,11 +48,31 @@ public class RecordFrame extends javax.swing.JFrame {
 =======
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     /**
      * Creates new form RecordFrame
      */
     public RecordFrame() {
         initComponents();
+<<<<<<< HEAD
+        mHistoryData = Kalkulator.mHistoryDataKalkulator;
+        
+        String[] NamaKolom = {"Angka1","Angka2","Operator","Hasil"};
+        Object[][] objekKalkulator = new Object[mHistoryData.getData().size()][4];
+   
+        int index = 0;
+        for (int ii = 0; ii < mHistoryData.getData().size(); ii++){
+            Record model = mHistoryData.getData().get(ii);
+            String[] array = {model.getAngka1(),
+                              model.getAngka2(),
+                              model.opertor(),
+                              model.getHasil(),
+            objekKalkulator[ii] = array;
+                 
+        }
+        model = new DefaultTableModel(objekKalkulator, NamaKolom);
+        jTableData.setModel(model);
+=======
 <<<<<<< HEAD
         mHistoryData = Kalkulator.datKalkulator;
         
@@ -86,6 +119,7 @@ public class RecordFrame extends javax.swing.JFrame {
         
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     }
 
     /**
@@ -102,15 +136,22 @@ public class RecordFrame extends javax.swing.JFrame {
         jTableData = new javax.swing.JTable();
 =======
 <<<<<<< HEAD
+        jTableData = new javax.swing.JTable();
+=======
+<<<<<<< HEAD
         jTabelData = new javax.swing.JTable();
 =======
         jTableData = new javax.swing.JTable();
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+<<<<<<< HEAD
+        jTableData.setModel(new javax.swing.table.DefaultTableModel(
+=======
 <<<<<<< HEAD
         jTableData.setModel(new javax.swing.table.DefaultTableModel(
 =======
@@ -120,6 +161,7 @@ public class RecordFrame extends javax.swing.JFrame {
         jTableData.setModel(new javax.swing.table.DefaultTableModel(
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -136,6 +178,11 @@ public class RecordFrame extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 =======
 <<<<<<< HEAD
+        jScrollPane1.setViewportView(jTableData);
+
+        jButton1.setText("jButton1");
+=======
+<<<<<<< HEAD
         jScrollPane1.setViewportView(jTabelData);
 
         jButton1.setText("Back");
@@ -145,11 +192,19 @@ public class RecordFrame extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 140, Short.MAX_VALUE))
+=======
 <<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -177,10 +232,17 @@ public class RecordFrame extends javax.swing.JFrame {
                         .addContainerGap())))
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addContainerGap())
+=======
 <<<<<<< HEAD
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
@@ -201,6 +263,7 @@ public class RecordFrame extends javax.swing.JFrame {
                 .addContainerGap(79, Short.MAX_VALUE))
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         );
 
         pack();
@@ -248,10 +311,14 @@ public class RecordFrame extends javax.swing.JFrame {
     private javax.swing.JTable jTableData;
 =======
 <<<<<<< HEAD
+    private javax.swing.JTable jTableData;
+=======
+<<<<<<< HEAD
     private javax.swing.JTable jTabelData;
 =======
     private javax.swing.JTable jTableData;
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     // End of variables declaration//GEN-END:variables
 }

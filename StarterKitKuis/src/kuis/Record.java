@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kuis;
 
 /**
@@ -16,12 +11,30 @@ public class Record {
     public Record(String angka1, String angka2, String operator, String hasil) {
 =======
     
+<<<<<<< HEAD
+    public Record(){
+=======
     public Record(String angka1, String angka2, String operator, String hasil){
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         this.angka1 = angka1;
         this.angka2 = angka2;
         this.operator = operator;
         this.hasil = hasil;
+<<<<<<< HEAD
+    }
+    
+    public void setAngka1(String angka1){
+        this.angka1 = angka1;
+    }
+    
+    public void setAngka2(String angka2){
+        this.angka2 = angka2;
+    }
+    
+    public void setOperator(String operator){
+        this.operator = operator;
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -69,6 +82,7 @@ public class Record {
 =======
         
         
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     }
 
     public String getAngka1() {
@@ -125,4 +139,7 @@ public class Record {
     
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
     
+    public void setHasil(String hasil){
+        this.hasil = hasil;
+    }
 }

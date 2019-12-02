@@ -1,26 +1,60 @@
 package kuis;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author septianenggarsukmana
  */
 public class LoginClass {
 <<<<<<< HEAD
+    private String nama, telepon, password;
+=======
+<<<<<<< HEAD
     private String nama,telepon,password;
 =======
     private String nama, telepon, password;
 <<<<<<< HEAD
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
 
     public LoginClass() {
     }
     
     
+<<<<<<< HEAD
+    
+    public LoginClass(String nama, String telepon, String password){
+        this.nama = nama;
+        this.telepon = telepon;
+        this.password = password;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setTelepon(String telepon) {
+        this.telepon = telepon;
+    }
+
+    public String getTelepon() {
+        return telepon;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    
+    public String info() {
+        return "Halo, " + getNama() + ", dengan No Telp : " + getTelepon();
+    }
+}
+=======
     
     public LoginClass(String nama, String telepon, String password){
         this.nama = nama;
@@ -132,3 +166,4 @@ public class LoginClass {
         return "Halo, "+getNama()+". No Telp: "+getTelepon();
     }
 }
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789

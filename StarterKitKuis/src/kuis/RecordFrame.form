@@ -24,6 +24,14 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="375" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="140" max="32767" attributes="0"/>
+=======
+<<<<<<< HEAD
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jScrollPane1" alignment="0" pref="378" max="32767" attributes="0"/>
@@ -56,12 +64,19 @@
               </Group>
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
+              <Component id="jScrollPane1" min="-2" pref="275" max="-2" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+=======
 <<<<<<< HEAD
               <Component id="jScrollPane1" pref="244" max="32767" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -82,6 +97,7 @@
               <EmptySpace pref="79" max="32767" attributes="0"/>
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
           </Group>
       </Group>
     </DimensionLayout>
@@ -98,11 +114,15 @@
         <Component class="javax.swing.JTable" name="jTableData">
 =======
 <<<<<<< HEAD
+        <Component class="javax.swing.JTable" name="jTableData">
+=======
+<<<<<<< HEAD
         <Component class="javax.swing.JTable" name="jTabelData">
 =======
         <Component class="javax.swing.JTable" name="jTableData">
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
@@ -122,11 +142,15 @@
         <Property name="text" type="java.lang.String" value="jButton1"/>
 =======
 <<<<<<< HEAD
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+=======
+<<<<<<< HEAD
         <Property name="text" type="java.lang.String" value="Back"/>
 =======
         <Property name="text" type="java.lang.String" value="jButton1"/>
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
       </Properties>
     </Component>
   </SubComponents>
