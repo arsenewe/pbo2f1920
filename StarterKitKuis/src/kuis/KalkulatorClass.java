@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kuis;
 
 import java.util.ArrayList;
@@ -13,6 +8,13 @@ import java.util.ArrayList;
  */
 public class KalkulatorClass {
     ArrayList<Record> listKalkulator;
+<<<<<<< HEAD
+    public KalkulatorClass(){
+    listKalkulator = new ArrayList<>();
+    }
+    public void isiData(String angka1, String angka2, String operator, String hasil){
+        Record kalkulator = new Record(angka1, angka2, operator, hasil);
+=======
     
     public KalkulatorClass(){
         listKalkulator = new ArrayList<>();
@@ -39,6 +41,7 @@ public class KalkulatorClass {
     public void isiData(String angka1, String angka2, String operator, String hasil){
         Record kalkulator = new Record(angka1, angka2, operator, hasil);
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         listKalkulator.add(kalkulator);
     }
     public ArrayList<Record> getData(){

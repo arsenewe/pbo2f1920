@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kuis;
 
 /**
@@ -10,6 +5,10 @@ package kuis;
  * @author septianenggarsukmana
  */
 public class Kalkulator extends javax.swing.JFrame {
+<<<<<<< HEAD
+        public static LoginClass loginc = Login.loginc;
+        public static KalkulatorClass mDataKalkulator = new
+=======
 <<<<<<< HEAD
     public static LoginClass loginc = new LoginClass();
     public static Login loginn;
@@ -28,6 +27,7 @@ public class Kalkulator extends javax.swing.JFrame {
     
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     /**
      * Creates new form Kalkulator
      */
@@ -38,6 +38,10 @@ public class Kalkulator extends javax.swing.JFrame {
     
     public Kalkulator() {
         initComponents();
+<<<<<<< HEAD
+       //loginc = new LoginClass();
+        jLabelHalo.setText(loginc.info());
+=======
 <<<<<<< HEAD
         //loginc=new LoginClass();
         jLabelHalo.setText(loginc.info());
@@ -65,6 +69,7 @@ public class Kalkulator extends javax.swing.JFrame {
        
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     }
 
     /**
@@ -88,9 +93,12 @@ public class Kalkulator extends javax.swing.JFrame {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
         telepon = new javax.swing.JLabel();
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,6 +133,10 @@ public class Kalkulator extends javax.swing.JFrame {
 
         jLabel3.setText("Hasil");
 
+<<<<<<< HEAD
+        jLabelHalo.setText("Text");
+
+=======
         jLabelHalo.setText("Halo");
 
 <<<<<<< HEAD
@@ -132,6 +144,7 @@ public class Kalkulator extends javax.swing.JFrame {
         telepon.setText("Halo");
 
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -143,6 +156,16 @@ public class Kalkulator extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
+<<<<<<< HEAD
+                        .addComponent(textHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelHalo, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+=======
 <<<<<<< HEAD
                         .addComponent(textHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -178,6 +201,7 @@ public class Kalkulator extends javax.swing.JFrame {
                                 .addComponent(textAngka1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
                                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(29, 29, 29)
                                 .addComponent(textAngka2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -187,6 +211,11 @@ public class Kalkulator extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addGap(30, 30, 30)
+                .addComponent(jLabelHalo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+=======
 <<<<<<< HEAD
                 .addGap(17, 17, 17)
                 .addComponent(jLabelHalo)
@@ -203,6 +232,7 @@ public class Kalkulator extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
@@ -314,9 +344,12 @@ public class Kalkulator extends javax.swing.JFrame {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     private javax.swing.JLabel telepon;
 >>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
 >>>>>>> e98d5f459e33b808bbbf5c127b74c610f3f901ae
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     private javax.swing.JTextField textAngka1;
     private javax.swing.JTextField textAngka2;
     private javax.swing.JTextField textHasil;

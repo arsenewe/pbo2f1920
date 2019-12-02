@@ -1,19 +1,15 @@
 package kuis;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author septianenggarsukmana
  */
 public class Login extends javax.swing.JFrame {
+<<<<<<< HEAD
+=======
     public static String namaVar;
     public static String teleponVar;
     
+>>>>>>> 617fc8f585ff199e7c0f7e2c7196ffd14ba7b789
     public static LoginClass loginc;
 
     /**
