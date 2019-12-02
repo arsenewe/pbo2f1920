@@ -17,6 +17,7 @@ public class Record {
         this.angka2 = angka2;
         this.operator = operator;
         this.hasil = hasil;
+<<<<<<< HEAD
     }
 
     public void setAngka1(String angka1) {
@@ -33,24 +34,56 @@ public class Record {
 
     public String getAngka2() {
         return angka2;
+=======
+        
+        
+    }
+
+    public String getAngka1() {
+        return angka1;
+    }
+
+    public void setAngka1(String angka1) {
+        this.angka1 = angka1;
+    }
+
+    public String getAngka2() {
+        return angka2;
+    }
+
+    public void setAngka2(String angka2) {
+        this.angka2 = angka2;
+    }
+
+    public String getOperator() {
+        return operator;
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
     }
 
     public void setOperator(String operator) {
         this.operator = operator;
     }
 
+<<<<<<< HEAD
     public String getOperator() {
         return operator;
+=======
+    public String getHasil() {
+        return hasil;
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
     }
 
     public void setHasil(String hasil) {
         this.hasil = hasil;
     }
+<<<<<<< HEAD
 
     public String getHasil() {
         return hasil;
     }
     
+=======
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
     
     
 }

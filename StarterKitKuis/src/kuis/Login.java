@@ -43,6 +43,18 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTextNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextNamaActionPerformed(evt);
+            }
+        });
+
+        jTextTelp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextTelpActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("Nama");
 
         jLabel2.setText("Telp");
@@ -106,8 +118,13 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String nama = jTextNama.getText().toString();
+<<<<<<< HEAD
         String telepon = jTextTelp.getText().toString();
         String password =  jPasswordField.getText().toString();
+=======
+        String password = jPasswordField.getText().toString();
+        String telepon = jTextTelp.getText().toString();
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
         
         namaVar = nama;
         teleponVar = telepon;
@@ -118,6 +135,17 @@ public class Login extends javax.swing.JFrame {
         new Kalkulator().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void jTextNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextNamaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextNamaActionPerformed
+
+    private void jTextTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTelpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextTelpActionPerformed
+
+>>>>>>> 0d9954003ceb102cfdb7ff40f807ef729c91ac29
     private void jPasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordFieldActionPerformed
@@ -166,4 +194,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField jTextNama;
     private javax.swing.JTextField jTextTelp;
     // End of variables declaration//GEN-END:variables
+
+    
 }
