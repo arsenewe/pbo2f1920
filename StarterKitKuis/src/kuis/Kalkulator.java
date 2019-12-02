@@ -10,12 +10,19 @@ package kuis;
  * @author septianenggarsukmana
  */
 public class Kalkulator extends javax.swing.JFrame {
+    public static LoginClass loginc = Login.loginc;
+    public static Login loginn;
+    double a, b, c;
+    public static KalkulatorClass mHistoryDataKalkulator = new KalkulatorClass();
 
     /**
      * Creates new form Kalkulator
      */
     public Kalkulator() {
         initComponents();
+        jLabelHalo.setText(loginn.loginc.info());
+        
+        //if(RecordFrame)
     }
 
     /**
@@ -34,10 +41,34 @@ public class Kalkulator extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabelHalo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        textAngka1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textAngka1ActionPerformed(evt);
+            }
+        });
+
+        textAngka2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textAngka2ActionPerformed(evt);
+            }
+        });
+
+        textHasil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textHasilActionPerformed(evt);
+            }
+        });
+
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "+", "-", "*", "/" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Angka 1");
 
@@ -49,12 +80,6 @@ public class Kalkulator extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(103, 103, 103))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -70,12 +95,23 @@ public class Kalkulator extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(134, 134, 134)
                         .addComponent(textHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelHalo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)))
+                .addGap(103, 103, 103))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addContainerGap()
+                .addComponent(jLabelHalo, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
@@ -88,11 +124,49 @@ public class Kalkulator extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textHasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textAngka1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textAngka1ActionPerformed
+        // TODO add your handling code here:
+        textAngka1.setText("");
+    }//GEN-LAST:event_textAngka1ActionPerformed
+
+    private void textAngka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textAngka2ActionPerformed
+        // TODO add your handling code here:
+        textAngka2.setText("");
+    }//GEN-LAST:event_textAngka2ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        a = Double.parseDouble(textAngka1.getText());
+        b = Double.parseDouble(textAngka1.getText());
+        
+        if (jComboBox1.getSelectedItem().equals("+")){
+            c = a + b;
+            String hasil = String.valueOf(c);
+            textHasil.setText(hasil);
+        }else if (jComboBox1.getSelectedItem().equals("-")){
+            c = a - b;
+            String hasil2 = String.valueOf(c);
+            textHasil.setText(hasil2);
+        } else if (jComboBox1.getSelectedItem().equals("*")){
+            c = a * b;
+            String hasil3 = String.valueOf(c);
+            textHasil.setText(hasil3);
+        } else if (jComboBox1.getSelectedItem().equals("/")) {
+            c = a / b;
+            String hasil4 = String.valueOf(c);
+            textHasil.setText(hasil4);
+        }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void textHasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textHasilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textHasilActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,6 +208,7 @@ public class Kalkulator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabelHalo;
     private javax.swing.JTextField textAngka1;
     private javax.swing.JTextField textAngka2;
     private javax.swing.JTextField textHasil;
