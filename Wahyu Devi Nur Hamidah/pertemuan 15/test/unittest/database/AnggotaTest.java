@@ -22,7 +22,7 @@ public class AnggotaTest {
     
     @Before
     public void setUp() {
-        instance = new Anggota("Yuni", "Bojonegoro", "085232404111");
+        instance = new Anggota("Wahyu", "Malang", "08523240851");
         System.out.format("Start Testing : %s \n", this.instance.getNama());
     }
     
@@ -34,7 +34,7 @@ public class AnggotaTest {
     @Test
     public void testSearch() {
         System.out.println("search test");
-        String keyword = "Yuni";
+        String keyword = "Wahyu";
         ArrayList<Anggota> result = instance.search(keyword);
         ArrayList<Anggota> expResult = instance.getByNamaAndAlamat(keyword, "","");
         assertEquals(expResult.size(), result.size());
